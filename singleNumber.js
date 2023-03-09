@@ -17,23 +17,20 @@ singleNumber([
     -560, -481, -174, 101, -997, 40, -527, -784, -283, 354,
 ]);
 
-
-
 singleNumber([4, 1, 2, 1, 2]);
 singleNumber([2, 2, 1]);
 
 var singleNumber = function (nums) {
     let appearances = {};
     for (let i = 0; i < nums.length; i++) {
-        if (appearances[nums[i]] == undefined) {
+        if (appearances[nums[i]] === undefined) {
             appearances[nums[i]] = 1;
         } else {
             appearances[nums[i]] += 1;
         }
     }
-    console.log('test', appearances);
+    // console.log('test', appearances);
     for (let key of Object.keys(appearances)) {
-        debugger;
         if (appearances[key] == 1) {
             return key;
         }
