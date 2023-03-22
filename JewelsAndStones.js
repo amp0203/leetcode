@@ -18,3 +18,11 @@ numJewelsInStones('aA', 'aAAbbbb');
 
 // Input: jewels = "aA", stones = "aAAbbbb"
 // Output: 3
+
+var numJewelsInStones = function (jewels, stones) {
+    let jewelsArray = jewels.split('');
+    let stonesArray = stones.split('');
+    return stonesArray.filter((stone) => jewelsArray.includes(stone)).length;
+};
+
+numJewelsInStones('aA', 'aAAbbbb');
