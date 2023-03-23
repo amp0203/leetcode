@@ -1,8 +1,8 @@
 //Count the Number of Consistent Strings
 var countConsistentStrings = function (allowed, words) {
-    let consistent = words.filter((word) => word.split(''));
-    let consistentLength = consistent.every();
-    // console.log('consistent', consistent);
+    return words.filter((word) =>
+        word.split('').every((word) => allowed.split('').includes(word))
+    ).length;
 };
 
 countConsistentStrings('ab', ['ad', 'bd', 'aaab', 'baa', 'badab']);
